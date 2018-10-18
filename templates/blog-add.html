@@ -3,29 +3,32 @@
 <html>
     <body>
 {% block content %}
-        <h2>Add a Blog Entry </h2>
+        <h2 align="center">Add a Blog Entry </h2>
         <form action='/newpost', method="post">
-            <table>
+            <table align="center">
                 <tbody>
-                    <tr>
-                        <td>
-                            <label for="title"><b>Title for your new blog:<b></label>
-                            <br/>
-                            <input row="5" id="title" name="title" type="text" value="{{request.form['title']}}"/>
-                            <span class="error">{{title_err}}</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="new_blog"><b>Your new blog:<b></label>
-                            <br/>
-                            <textarea row="5" id="new_blog" name="new_blog">{{request.form['new_blog']}}</textarea>
-                            <span class="error">{{new_blog_err}}</span>
-                        </td>
-                    </tr>
+                   
+                        <tr>
+                            <td align="center">
+                                <label for="title" ><b>Blog Title:<b></label>
+                                <br/>
+                                <input row="5" id="title" name="title" type="text" value="{{title}}"/><p class="error">{{title_err}}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <label for="new_blog"><b>Your new blog:<b></label>
+                                <br/>
+                                <textarea row="5" id="new_blog" name="new_blog"></textarea><p class="error">{{new_blog_err}}</p>
+                                
+                            </td>
+                        </tr>
+                
                 </tbody>
             </table>
-            <input type="submit" value='Add Entry'/>
+            <p align="center">
+                <input type="submit" value='Add Entry'/>
+            </p>
         </form>
 {% endblock %}
     </body>

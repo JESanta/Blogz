@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<html>
     <h2 align="center">Blog Entry</h2>
     <ul>
         <h1 align="center">{{blog.title}}</h1>
         <p align="center">{{blog.new_blog}}</p>
+        <li>Posted by:<a href="/blog?user_id={{blog.owner.id}}">{{blog.owner.username}}</a></li>
         <br>
     </ul>
 
